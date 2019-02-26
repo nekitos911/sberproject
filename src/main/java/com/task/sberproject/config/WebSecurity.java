@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 @EnableOAuth2Sso
 @Order(SecurityProperties.BASIC_AUTH_ORDER)
-@Profile(value = {"dev, prod"})
+@Profile({"prod", "dev"})
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
