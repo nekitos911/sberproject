@@ -1,0 +1,8 @@
+security:
+  oauth2:
+    client:
+      accessTokenUri: https://oauthasservices-${sap.user}.hanatrial.ondemand.com/oauth2/api/v1/token
+      userAuthorizationUri: https://oauthasservices-${sap.user}.hanatrial.ondemand.com/oauth2/api/v1/authorize
+      grant-type: authorization_code
+    resource:
+      user-info-uri: ${config.user-info-uri}

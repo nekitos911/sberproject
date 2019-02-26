@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Weather app</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+
+</nav>
+    <p th:text="'Temperature in ' + ${cityName} + ' is ' + ${weather.getTemperature()} + ' C'"></p>
+    <a th:href="@{/}">to home page</a>
+</body>
+</html>
