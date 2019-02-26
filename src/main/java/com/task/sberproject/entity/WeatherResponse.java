@@ -9,11 +9,11 @@ import java.util.Map;
 
 public class WeatherResponse implements Serializable {
     @Getter @Setter
-    private Double temperature;
+    private Integer temperature;
 
     @JsonProperty("main")
     public void setTemp(Map<String, Object> main) {
         // Может прийти Integer
-        setTemperature(Double.valueOf(String.valueOf(main.get("temp"))));
+        setTemperature((int)Math.round(Double.valueOf(String.valueOf(main.get("temp")))));
     }
 }
