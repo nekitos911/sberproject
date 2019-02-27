@@ -26,6 +26,7 @@ public class WeatherController {
             Weather weather = weatherService.getWeather(cityName);
             return ResponseEntity.ok(weather);
         } catch (Exception e) {
+            log.error("***Bad city in request: {}", e);
             return new ResponseEntity("{\"error\":\"bad request\"}", HttpStatus.BAD_REQUEST);
         }
     }
